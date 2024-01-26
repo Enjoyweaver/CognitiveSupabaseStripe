@@ -85,7 +85,7 @@ export default function Pricing({
               rel="noopener noreferrer"
               target="_blank"
             >
-              Stripe Dashboard
+              Cognitive Labs Stripe Dashboard
             </a>
             .
           </p>
