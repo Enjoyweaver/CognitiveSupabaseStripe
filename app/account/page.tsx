@@ -94,8 +94,8 @@ export default async function Account() {
           </div>
         </Card>
         <Card
-          title="Your Name"
-          description="Please enter your full name, or a display name you are comfortable with."
+          title="Cognitive Labs"
+          description="Scheduling your time around your cognitive abilities."
           footer={
             <div className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
               <p className="pb-4 sm:pb-0">64 characters maximum</p>
@@ -105,8 +105,8 @@ export default async function Account() {
                 form="nameForm"
                 disabled={true}
               >
-                {/* WARNING - In Next.js 13.4.x server actions are in alpha and should not be used in production code! */}
-                Update Name
+
+                Cognitive Labs
               </Button>
             </div>
           }
