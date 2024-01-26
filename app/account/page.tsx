@@ -71,11 +71,45 @@ export default async function Account() {
             Account
           </h1>
           <p className="max-w-2xl m-auto mt-5 text-xl text-zinc-200 sm:text-center sm:text-2xl">
-            We partnered with Stripe for a simplified billing.
+            Here you can you view your account details, enter your tasks, and
+            pay your invoice.
           </p>
         </div>
       </div>
       <div className="p-4">
+        <Card
+          title="Schedule your tasks"
+          description="Input your tasks and a short description about each."
+          footer={
+            <div className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
+              <p className="pb-4 sm:pb-0">
+                We will email you to verify the change.
+              </p>
+              <Button
+                variant="slim"
+                type="submit"
+                form="emailForm"
+                disabled={true}
+              >
+                {/* WARNING - In Next.js 13.4.x server actions are in alpha and should not be used in production code! */}
+                Update Email
+              </Button>
+            </div>
+          }
+        >
+          <div className="mt-8 mb-4 text-xl font-semibold">
+            <form id="emailForm" action={updateEmail}>
+              <input
+                type="text"
+                name="email"
+                className="w-1/2 p-3 rounded-md bg-zinc-800"
+                defaultValue={user ? user.email : ''}
+                placeholder="Your email"
+                maxLength={64}
+              />
+            </form>
+          </div>
+        </Card>
         <Card
           title="Your Plan"
           description={
@@ -105,7 +139,6 @@ export default async function Account() {
                 form="nameForm"
                 disabled={true}
               >
-
                 Cognitive Labs
               </Button>
             </div>
