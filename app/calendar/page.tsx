@@ -1,5 +1,6 @@
 'use client';
 
+import Event from './Event';
 import { EventSourceInput } from '@fullcalendar/core/index.js';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin, {
@@ -120,6 +121,7 @@ export default function Home() {
 
   return (
     <>
+      <Event />
       <nav className="flex justify-between mb-12 border-b border-violet-100 p-4">
         <h1 className="font-bold text-2xl text-gray-700">Calendar</h1>
       </nav>
