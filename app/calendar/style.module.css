@@ -1,54 +1,50 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  @apply bg-gray-50;
-}
-
-input {
-  @apply px-2;
-}
-  .fc-header-toolbar {
-    display: inline-block;
-    padding: 4px 4px;
-    
-    @apply space-x-8;
+.fc-header-toolbar {
+  display: inline-block;
+  padding: 4px 4px;
+  .child-element {
+    margin-right: 8px; /* Apply space between child elements */
+  }
 }
 
 .fc-day {
-  @apply m-8;
+  margin: 8px; /* Apply margin to the element */
 }
 
 .fc-scrollgrid-sync-table {
-  @apply w-full;
+  width: 100%; /* Apply full width */
 }
 
 .fc-view {
-  @apply w-full h-full lg:h-3/4 xl:h-2/3 bg-white;
+  height: 100%; /* Apply full height */
+  width: 100%; /* Apply full width */
+  background-color: white;
+  height: 75%; /* Apply height for large screens */
+  height: 66.67%; /* Apply height for extra-large screens */
 }
 
 .fc-h-event {
-  @apply bg-violet-500 border border-violet-600 ;
-  
+  border: 1px solid #8b5cf6; /* Apply border */
+  background-color: #9333ea; /* Apply background color */
 }
 
 .fc .fc-daygrid-day.fc-day-today {
-  @apply bg-violet-100 ;
+  background-color: #f3e8ff; /* Apply background color */
 }
 
-.fc .fc-button{
-  @apply bg-violet-800 hover:bg-violet-900  ;
+.fc .fc-button {
+  background-color: #6d28d9; /* Apply background color */
+  hover: #7c3aed; /* Apply hover background color */
 }
 
 .fc .fc-button-primary:not(:disabled).fc-button-active {
-  @apply bg-violet-600;
+  background-color: #8b5cf6; /* Apply background color */
 }
 
 .fc .fc-button-primary:disabled {
-  @apply bg-violet-600;
+  background-color: #8b5cf6; /* Apply background color */
 }
+
 .fc-v-event {
-  @apply bg-violet-500 border border-violet-600 ;
-  
+  border: 1px solid #8b5cf6; /* Apply border */
+  background-color: #9333ea; /* Apply background color */
 }
