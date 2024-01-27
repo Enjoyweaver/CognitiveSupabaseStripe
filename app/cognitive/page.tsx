@@ -1,9 +1,7 @@
 // Cognitive.tsx
 
 import styles from './CognitiveStyles.module.css';
-import Header from '@/components/Header';
 import Sources from '@/components/Sources';
-import { createClient } from '@/utils/supabase/server';
 import { cookies } from 'next/headers';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
