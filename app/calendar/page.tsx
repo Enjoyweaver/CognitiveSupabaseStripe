@@ -11,6 +11,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import { Dialog, Transition } from '@headlessui/react';
 import { CheckIcon, ExclamationTriangleIcon } from '@heroicons/react/20/solid';
 import { Fragment, useEffect, useState } from 'react';
+import './style.module.css';
 
 interface Event {
   title: string;
