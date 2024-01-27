@@ -11,7 +11,6 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import { Dialog, Transition } from '@headlessui/react';
 import { CheckIcon, ExclamationTriangleIcon } from '@heroicons/react/20/solid';
 import { Fragment, useEffect, useState } from 'react';
-import './style.module.css';
 
 interface Event {
   title: string;
@@ -117,39 +116,6 @@ export default function Home() {
       allDay: false,
       id: 0
     });
-  }
-
-  async function createCalendarEvent() {
-    console.log('Creating calendar event');
-    const event = {
-      summary: eventName,
-      description: eventDescription,
-      start: {
-        dateTime: start.toISOString(), // Date.toISOString() ->
-        timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone // America/Los_Angeles
-      },
-      end: {
-        dateTime: end.toISOString(), // Date.toISOString() ->
-        timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone // America/Los_Angeles
-      }
-    };
-    await fetch(
-      'https://www.googleapis.com/calendar/v3/calendars/primary/events',
-      {
-        method: 'POST',
-        headers: {
-          Authorization: 'Bearer ' + session.provider_token // Access token for google
-        },
-        body: JSON.stringify(event)
-      }
-    )
-      .then((data) => {
-        return data.json();
-      })
-      .then((data) => {
-        console.log(data);
-        alert('Event created, check your Google Calendar!');
-      });
   }
 
   return (
