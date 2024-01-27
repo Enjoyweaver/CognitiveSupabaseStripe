@@ -23,11 +23,6 @@ export default async function Navbar() {
             </Link>
             <nav className="hidden ml-6 space-x-2 lg:block">
               {user && (
-                <Link href="/pricing" className={s.link}>
-                  Pricing
-                </Link>
-              )}
-              {user && (
                 <Link href="/account" className={s.link}>
                   Account
                 </Link>

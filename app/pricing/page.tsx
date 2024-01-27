@@ -1,6 +1,5 @@
 'use client';
 
-import Body from '@/components/Body';
 import Button from '@/components/ui/Button';
 import { Database } from '@/types_db';
 import { postData } from '@/utils/helpers';
@@ -40,12 +39,11 @@ export default function Pricing({
 }: Props) {
   const intervals = Array.from(
     new Set(
-      products?.flatMap((product) =>
+      products.flatMap((product) =>
         product?.prices?.map((price) => price?.interval)
-      ) ?? []
+      )
     )
   );
-
   const router = useRouter();
   const [billingInterval, setBillingInterval] =
     useState<BillingInterval>('month');
@@ -74,7 +72,7 @@ export default function Pricing({
     }
   };
 
-  if (!products || !products.length)
+  if (!products.length)
     return (
       <section className="bg-black">
         <div className="max-w-6xl px-4 py-8 mx-auto sm:py-24 sm:px-6 lg:px-8">
@@ -254,7 +252,6 @@ export default function Pricing({
               </div>
             );
           })}
-          <Body />
         </div>
         <LogoCloud />
       </div>

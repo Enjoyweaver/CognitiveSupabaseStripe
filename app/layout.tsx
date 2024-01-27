@@ -5,7 +5,7 @@ import { PropsWithChildren } from 'react';
 import 'styles/main.css';
 
 const meta = {
-  title: 'Cognitive labs',
+  title: 'Cognitive Calendar',
   description: 'Schedule your day with ease',
   cardImage: '/og.png',
   robots: 'follow, index',
