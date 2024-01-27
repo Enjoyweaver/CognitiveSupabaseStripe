@@ -118,6 +118,39 @@ export default function Home() {
     });
   }
 
+  async function createCalendarEvent() {
+    console.log('Creating calendar event');
+    const event = {
+      summary: eventName,
+      description: eventDescription,
+      start: {
+        dateTime: start.toISOString(), // Date.toISOString() ->
+        timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone // America/Los_Angeles
+      },
+      end: {
+        dateTime: end.toISOString(), // Date.toISOString() ->
+        timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone // America/Los_Angeles
+      }
+    };
+    await fetch(
+      'https://www.googleapis.com/calendar/v3/calendars/primary/events',
+      {
+        method: 'POST',
+        headers: {
+          Authorization: 'Bearer ' + session.provider_token // Access token for google
+        },
+        body: JSON.stringify(event)
+      }
+    )
+      .then((data) => {
+        return data.json();
+      })
+      .then((data) => {
+        console.log(data);
+        alert('Event created, check your Google Calendar!');
+      });
+  }
+
   return (
     <>
       <nav className="flex justify-between mb-12 border-b border-violet-100 p-4">
