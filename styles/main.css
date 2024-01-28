@@ -148,16 +148,15 @@ a {
   /* Override flex properties for larger screens if needed */
   .column {
     max-width: 30%; /* Example: 3 equal-width columns on larger screens */
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .blue-column {
-    max-width: 20%; /* Adjust as needed */
+    max-width: 22%; /* Adjust as needed */
     font-size: 0.7rem;
-    text-align: center;
+    text-align: left;
   }
   ul li {
     font-size: 0.7rem;
-    text-align: center;
   }
 }
