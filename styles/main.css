@@ -152,7 +152,10 @@ a {
   }
 
   .blue-column {
-    max-width: 25%; /* Adjust as needed */
-    font-size: 0.6rem;
+    max-width: 20%; /* Adjust as needed */
+    font-size: 0.7rem;
+  }
+  ul li {
+    font-size: 0.7rem;
   }
 }
