@@ -134,7 +134,7 @@ a {
   margin: 0 10px; /* Add spacing between columns */
 }
 
-@media (max-width: 767px) {
+@media (max-width: 650px) {
   .flex-columns {
     flex-direction: row; /* Display columns side by side on mobile */
     padding: 0; /* Remove padding for smaller screens */
