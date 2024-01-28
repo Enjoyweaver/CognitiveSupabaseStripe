@@ -78,8 +78,8 @@ export default function Pricing({
         <div className="max-w-6xl px-4 py-8 mx-auto sm:py-24 sm:px-6 lg:px-8">
           <div className="sm:flex sm:flex-col sm:align-center"></div>
           <p className="text-4xl font-extrabold text-white sm:text-center sm:text-6xl">
-            If no plans are displayed, there is an error between here and our
-            Stripe integration and we are working on it. .
+            There will be several tiers of pricing plans for the Cognitive
+            Calendar, and when they are ready, they will be displayed here.
           </p>
         </div>
         <LogoCloud />
