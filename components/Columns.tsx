@@ -7,7 +7,7 @@ export default function Columns() {
           <h3 className="text-white text-lg font-bold mb-2 h-20">
             Cognitive Abilities
           </h3>
-          <ul className="list-disc pl-3 text-white text-lg">
+          <ul className=" pl-3 text-white text-lg">
             <li className="list-item">Analytical</li>
             <li className="list-item">Perceptual</li>
             <li className="list-item">Creative</li>
@@ -25,7 +25,7 @@ export default function Columns() {
           <h3 className="text-white text-lg font-bold mb-2 h-20">
             Definitions
           </h3>
-          <ul className="list-disc pl-3 text-white text-lg">
+          <ul className=" pl-3 text-white text-lg">
             <li className="list-item">
               More than one piece may fit into the puzzle, but not all bring the
               same value.
@@ -63,7 +63,7 @@ export default function Columns() {
       <div className="column">
         <div className="bg-orange-500 rounded-md rounded-bl-md p-4 mb-4">
           <h3 className="text-white text-lg font-bold mb-2 h-20">Examples</h3>
-          <ul className="list-disc pl-3 text-white text-lg">
+          <ul className="pl-3 text-white text-lg">
             <li className="list-item">
               Some people complete a puzzle best by starting with the edges,
               others by the colors, and others just start.

@@ -103,7 +103,7 @@ a {
 @media (max-width: 767px) {
   /* Adjust the max-width value based on your mobile breakpoint */
   .list-item {
-    height: 290px; /* Height for mobile */
+    height: 250px; /* Height for mobile */
   }
 }
 
