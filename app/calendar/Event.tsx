@@ -1,6 +1,6 @@
 'use client';
 
-import { getSession } from '@/app/supabase-server';
+import { Session } from '@/app/supabase-server';
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
 import React, { useState } from 'react';
