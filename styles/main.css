@@ -154,7 +154,12 @@ a {
   margin-right: 10px; /* Add spacing between the left and middle columns */
 }
 
-.bg-green-500,
+.bg-green-500 {
+  flex: 1; /* Make middle and right columns grow to fill available space */
+  max-width: none; /* Remove max-width for smaller screens */
+  margin: 0 10px; /* Add spacing between the columns on mobile */
+}
+
 .bg-orange-500 {
   flex: 1; /* Make middle and right columns grow to fill available space */
   max-width: none; /* Remove max-width for smaller screens */
