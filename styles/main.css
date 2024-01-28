@@ -147,10 +147,10 @@ a {
 @media (min-width: 768px) {
   /* Override flex properties for larger screens if needed */
   .column {
-    flex: 1 1 30%; /* Example: 3 equal-width columns on larger screens */
+    flex: 1 1 20%; /* Example: 3 equal-width columns on larger screens */
   }
 
   .blue-column {
-    flex: 1 1 20%; /* Adjust as needed */
+    flex: 1 1 10%; /* Adjust as needed */
   }
 }

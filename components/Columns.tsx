@@ -1,6 +1,6 @@
 export default function Columns() {
   return (
-    <div className="flex pt-20 justify-center items-center">
+    <div className="flex flex-wrap justify-center pt-10">
       {/* Column 1: Cognitive Functions */}
       <div className=" blue-column">
         <div className="bg-blue-500 rounded-md rounded-bl-md p-4 mb-4">
