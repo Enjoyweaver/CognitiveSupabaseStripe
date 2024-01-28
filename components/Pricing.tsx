@@ -77,7 +77,7 @@ export default function Pricing({
       <section className="bg-black">
         <div className="max-w-6xl px-4 py-8 mx-auto sm:py-24 sm:px-6 lg:px-8">
           <div className="sm:flex sm:flex-col sm:align-center"></div>
-          <p className="text-4xl font-extrabold text-white sm:text-center sm:text-6xl">
+          <p className="text-4xl signika-title font-extrabold text-white sm:text-center sm:text-6xl">
             There will be several tiers of pricing plans for the Cognitive
             Calendar, and when they are ready, they will be displayed here.
           </p>
@@ -91,7 +91,7 @@ export default function Pricing({
       <section className="bg-black">
         <div className="max-w-6xl px-4 py-8 mx-auto sm:py-24 sm:px-6 lg:px-8">
           <div className="sm:flex sm:flex-col sm:align-center">
-            <h1 className="text-4xl font-extrabold text-white sm:text-center sm:text-6xl">
+            <h1 className="text-4xl signika-title font-extrabold text-white sm:text-center sm:text-6xl">
               Cognitive Calendar Pricing Plans
             </h1>
             <p className="max-w-2xl m-auto mt-5 text-xl text-zinc-200 sm:text-center sm:text-2xl">
