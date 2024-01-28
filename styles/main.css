@@ -96,12 +96,13 @@ a {
   background-color: #8b5cf6; /* Apply background color */
 }
 
-.row {
-  height: 90px; /* Default height for larger screens */
+.list-item {
+  height: 90px; /* Default height for desktop */
 }
 
-@media (max-width: 600px) {
-  .row {
-    height: 290px; /* Adjusted height for smaller screens */
+@media (max-width: 767px) {
+  /* Adjust the max-width value based on your mobile breakpoint */
+  .list-item {
+    height: 290px; /* Height for mobile */
   }
 }
