@@ -138,11 +138,6 @@ a {
     max-width: 100%; /* Ensure container doesn't overflow */
   }
 
-  .bg-blue-500 {
-    max-width: 20%; /* First column adjusts based on screen size */
-    margin-right: 10px;
-  }
-
   .bg-green-500,
   .bg-orange-500 {
     flex: 1; /* Middle and right columns fill remaining space */
