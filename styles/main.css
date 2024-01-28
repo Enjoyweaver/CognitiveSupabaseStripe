@@ -135,16 +135,18 @@ a {
 /* Responsive styling for smaller screens */
 @media (max-width: 767px) {
   .flex-columns {
-    max-width: 90%; /* Ensure container doesn't overflow */
+    max-width: 1140px; /* Ensure container doesn't overflow */
+    margin: 0 auto; /* Center columns horizontally */
   }
+
   .bg-blue-500 {
-    max-width: 20%; /* First column adjusts based on screen size */
-    margin-right: 10px;
+    margin-right: 10px; /* Maintain some spacing between columns */
   }
+
   .bg-green-500,
   .bg-orange-500 {
-    flex: 1; /* Middle and right columns fill remaining space */
-    margin: 0 10px; /* Adjust spacing as needed */
+    flex: 0.7; /* Occupy less space to prevent overflow */
+    margin: 0 5px; /* Adjust spacing to your preference */
   }
 }
 
