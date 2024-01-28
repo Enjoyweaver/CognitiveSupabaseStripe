@@ -13,7 +13,7 @@ export default function Body() {
           activities based on your cognitive abilities, enhancing your
           efficiency and productivity.
         </p>
-        <p className="text-1.5xl !leading-tight mx-auto max-w-xl text-center pt-10 pb-20">
+        <p className="text-1.5xl !leading-tight mx-auto max-w-xl text-center pt-10 ">
           Here are the cognitive abilities we'll be working with and more
           information about them, though do know that we are not saying these
           are all of the cognitive abilities, but just that these are the ones

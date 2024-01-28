@@ -109,7 +109,20 @@ a {
 
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap');
 
-/* Common styling for all screen sizes */
+@font-face {
+  font-family: 'Signika';
+  src: url('./fonts/static/Signika-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Signika';
+  src: url('./fonts/static/Signika-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 .signika-title {
   font-family: 'Signika', sans-serif;
   color: #38b6ff;
@@ -119,37 +132,16 @@ a {
   margin-bottom: 8px; /* Add spacing between list items */
 }
 
-/* Responsive styling for all screen sizes */
-.flex-columns {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px; /* Adjust overall padding as needed */
-}
-
-.bg-green-500,
-.bg-orange-500 {
-  flex: 1; /* Make columns grow to fill available space */
-  width: 100%; /* Ensure columns take full width */
-  max-width: 400px; /* Set a maximum width for each column */
-  margin: 0 10px; /* Add spacing between columns */
-}
-
+/* Responsive styling for smaller screens */
 @media (max-width: 767px) {
   .flex-columns {
-    flex-direction: row; /* Display columns side by side on mobile */
-    padding: 0; /* Remove padding for smaller screens */
+    flex-direction: column; /* Stack columns on top of each other */
   }
 
-  /* Adjust the width of the left column */
-  .bg-blue-500 {
-    max-width: 150px; /* Set the maximum width for the left column */
-    margin-right: 10px; /* Add spacing between the left and middle columns */
-  }
-
+  .bg-blue-500,
   .bg-green-500,
   .bg-orange-500 {
-    flex: 1; /* Make middle and right columns grow to fill available space */
-    max-width: none; /* Remove max-width for smaller screens */
-    margin: 0 10px; /* Add spacing between the columns on mobile */
+    width: 100%; /* Make columns take full width on small screens */
+    margin-bottom: 20px; /* Add spacing between columns */
   }
 }
