@@ -1,5 +1,4 @@
 import 'styles/main.css';
-import Columns from './Columns';
 
 export default function Body() {
   return (
@@ -20,7 +19,6 @@ export default function Body() {
           are all of the cognitive abilities, but just that these are the ones
           we'll be working with in this app:
         </p>
-        <Columns />
       </main>
     </div>
   );

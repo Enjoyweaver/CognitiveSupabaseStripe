@@ -1,5 +1,3 @@
-import 'styles/main.css';
-
 export default function Columns() {
   return (
     <div className="flex pt-20 flex-columns justify-center items-center">
