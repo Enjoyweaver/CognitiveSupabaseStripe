@@ -1,4 +1,3 @@
-import Columns from '@/app/columns/Columns';
 import {
   getSession,
   getSubscription,
@@ -17,7 +16,6 @@ export default async function PricingPage() {
   return (
     <>
       <Body />
-      <Columns />
       <Pricing
         session={session}
         user={session?.user}
