@@ -7,7 +7,7 @@ export default function Columns() {
           <h3 className="text-white text-lg font-bold mb-2 h-20">
             Cognitive Abilities
           </h3>
-          <ul className=" pl-3 text-white text-lg">
+          <ul className="text-left pl-3 text-white text-lg">
             <li className="list-item">Analytical</li>
             <li className="list-item">Perceptual</li>
             <li className="list-item">Creative</li>
