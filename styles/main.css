@@ -95,3 +95,13 @@ a {
 .fc .fc-button-primary:disabled {
   background-color: #8b5cf6; /* Apply background color */
 }
+
+.row {
+  height: 90px; /* Default height for larger screens */
+}
+
+@media (max-width: 600px) {
+  .row {
+    height: 290px; /* Adjusted height for smaller screens */
+  }
+}
