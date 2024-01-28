@@ -19,7 +19,7 @@ export default function Body() {
           are all of the cognitive abilities, but just that these are the ones
           we'll be working with in this app:
         </p>
-        <div className="flex pl-20 pr-20 pt-20 flex-columns">
+        <div className="flex pl-20 pr-20 pt-20 flex-columns justify-center items-center">
           {/* Column 1: Cognitive Functions */}
           <div className="bg-blue-500 rounded-md rounded-bl-md p-4 flex flex-col items-center">
             <h3 className="text-white text-lg font-bold mb-2 h-20">

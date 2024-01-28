@@ -136,18 +136,24 @@ a {
 @media (max-width: 747px) {
   .flex-columns {
     max-width: 100%; /* Ensure container doesn't overflow */
-    margin: 0 auto; /* Center columns horizontally */
-    padding: 0 20px; /* Add padding to the container for better spacing */
+    justify-content: center; /* Center columns horizontally */
+    padding: 0 20px; /* Add padding for better spacing */
   }
 
   .bg-blue-500 {
-    margin-right: 10px; /* Maintain some spacing between columns */
+    margin-right: 10px; /* Add spacing between the left and middle columns */
   }
 
-  .bg-green-500,
-  .bg-orange-500 {
+  .bg-green-500 {
+    flex: 1; /* Make middle and right columns grow to fill available space */
     max-width: none; /* Remove max-width for smaller screens */
-    margin: 0 10px;
+    margin: 0 10px; /* Add spacing between the columns on mobile */
+  }
+
+  .bg-orange-500 {
+    flex: 1; /* Make middle and right columns grow to fill available space */
+    max-width: none; /* Remove max-width for smaller screens */
+    margin: 0 10px; /* Add spacing between the columns on mobile */
   }
 }
 
