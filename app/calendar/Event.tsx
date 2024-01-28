@@ -1,6 +1,7 @@
+/*
 'use client';
 
-import { Session } from '@/app/supabase-server';
+import { getSession } from '@/app/supabase-server';
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
 import React, { useState } from 'react';
@@ -15,7 +16,7 @@ interface EventFormData {
 }
 
 interface Props {
-  session: Session;
+  session: getSession;
 }
 
 const Event: React.FC<Props> = ({ session }) => {
@@ -147,3 +148,4 @@ const Event: React.FC<Props> = ({ session }) => {
 };
 
 export default Event;
+*/
