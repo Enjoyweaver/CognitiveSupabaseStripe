@@ -154,8 +154,10 @@ a {
   .blue-column {
     max-width: 20%; /* Adjust as needed */
     font-size: 0.7rem;
+    text-align: center;
   }
   ul li {
     font-size: 0.7rem;
+    text-align: center;
   }
 }
