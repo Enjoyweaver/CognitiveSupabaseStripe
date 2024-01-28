@@ -133,7 +133,7 @@ a {
 }
 
 /* Responsive styling for smaller screens */
-@media (max-width: 767px) {
+@media (max-width: 1140px) {
   .flex-columns {
     max-width: 767px; /* Ensure container doesn't overflow */
     margin: 0 auto; /* Center columns horizontally */
