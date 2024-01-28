@@ -140,12 +140,24 @@ a {
 
 .column {
   margin: 0 10px;
-  width: 100%;
-  max-width: 300px; /* Adjust the max-width as needed */
+
+  max-width: 350px; /* Adjust the max-width as needed */
+}
+
+.blue-column {
+  margin: 0 10px;
+  max-width: 200px; /* Adjust the max-width as needed */
 }
 
 @media (min-width: 768px) {
   .column {
-    width: calc(33.33% - 20px); /* 3 columns with 20px spacing */
+    margin: 0 10px;
+
+    max-width: 350px; /* Adjust the max-width as needed */
+  }
+
+  .blue-column {
+    margin: 0 10px;
+    max-width: 200px; /* Adjust the max-width as needed */
   }
 }

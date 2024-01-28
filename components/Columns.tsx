@@ -2,7 +2,7 @@ export default function Columns() {
   return (
     <div className="flex pt-20 justify-center items-center">
       {/* Column 1: Cognitive Functions */}
-      <div className="column">
+      <div className=" blue-column">
         <div className="bg-blue-500 rounded-md rounded-bl-md p-4 mb-4">
           <h3 className="text-white text-lg font-bold mb-2 h-20">
             Cognitive Abilities
