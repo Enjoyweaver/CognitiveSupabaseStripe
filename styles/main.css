@@ -97,7 +97,7 @@ a {
 }
 
 .list-item {
-  height: 90px; /* Default height for desktop */
+  height: 120px; /* Default height for desktop */
 }
 
 @media (max-width: 767px) {
@@ -170,4 +170,10 @@ a {
   flex: 1; /* Make middle and right columns grow to fill available space */
   max-width: none; /* Remove max-width for smaller screens */
   margin: 0; /* Add spacing between the columns on mobile */
+}
+
+@media (max-width: 747px) {
+  .flex-columns {
+    justify-content: center; /* Center columns horizontally */
+  }
 }
