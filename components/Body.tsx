@@ -13,7 +13,7 @@ export default function Body() {
           activities based on your cognitive abilities, enhancing your
           efficiency and productivity.
         </p>
-        <p className="text-1.5xl !leading-tight mx-auto max-w-xl text-center pt-10">
+        <p className="text-1.5xl !leading-tight mx-auto max-w-xl text-center pt-10 pb-20">
           Here are the cognitive abilities we'll be working with and more
           information about them, though do know that we are not saying these
           are all of the cognitive abilities, but just that these are the ones
@@ -21,7 +21,7 @@ export default function Body() {
         </p>
         <div className="flex pl-20 pr-20 pt-20 flex-columns">
           {/* Column 1: Cognitive Functions */}
-          <div className="bg-blue-500 rounded-tl-md rounded-bl-md p-4 flex flex-col items-center">
+          <div className="bg-blue-500 rounded-md rounded-bl-md p-4 flex flex-col items-center">
             <h3 className="text-white text-lg font-bold mb-2 h-20">
               Cognitive Abilities
             </h3>
@@ -38,7 +38,7 @@ export default function Body() {
           </div>
 
           {/* Column 2: Definitions */}
-          <div className="bg-green-500 rounded-tl-md rounded-bl-md p-4 flex flex-col items-center">
+          <div className="bg-green-500 rounded-md rounded-bl-md p-4 flex flex-col items-center">
             <h3 className="text-white text-lg font-bold mb-2 h-20">
               Definitions
             </h3>
@@ -78,7 +78,7 @@ export default function Body() {
           </div>
 
           {/* Column 3: Examples */}
-          <div className="bg-orange-500 rounded-tl-md rounded-bl-md p-4 flex flex-col items-center">
+          <div className="bg-orange-500 rounded-md rounded-bl-md p-4 flex flex-col items-center">
             <h3 className="text-white text-lg font-bold mb-2 h-20">Examples</h3>
             <ul className="list-disc pl-3 text-white text-lg">
               <li className="list-item">
