@@ -145,13 +145,12 @@ a {
 
   .bg-green-500,
   .bg-orange-500 {
-    flex: 0.7; /* Occupy less space to prevent overflow */
-    margin: 0 5px; /* Adjust spacing to your preference */
+    max-width: none; /* Remove max-width for smaller screens */
+    margin: 0 10px;
   }
 }
 
 .bg-blue-500 {
-  max-width: 150px; /* Set the maximum width for the left column */
   margin-right: 10px; /* Add spacing between the left and middle columns */
 }
 
