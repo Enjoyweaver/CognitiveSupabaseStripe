@@ -18,7 +18,7 @@ interface Props {
   session: Session;
 }
 
-const Event: React.FC = () => {
+const Event: React.FC<Props> = ({ session }) => {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   const supabase = createClient(supabaseUrl || '', supabaseKey || '');
