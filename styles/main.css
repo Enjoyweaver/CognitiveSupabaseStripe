@@ -134,16 +134,22 @@ a {
   margin: 0 10px; /* Add spacing between columns */
 }
 
-@media (max-width: 650px) {
+@media (max-width: 767px) {
   .flex-columns {
     flex-direction: row; /* Display columns side by side on mobile */
     padding: 0; /* Remove padding for smaller screens */
   }
 
-  .bg-blue-500,
+  /* Adjust the width of the left column */
+  .bg-blue-500 {
+    max-width: 150px; /* Set the maximum width for the left column */
+    margin-right: 10px; /* Add spacing between the left and middle columns */
+  }
+
   .bg-green-500,
   .bg-orange-500 {
+    flex: 1; /* Make middle and right columns grow to fill available space */
     max-width: none; /* Remove max-width for smaller screens */
-    margin: 0 10px; /* Add spacing between columns on mobile */
+    margin: 0 10px; /* Add spacing between the columns on mobile */
   }
 }
