@@ -132,21 +132,15 @@ a {
   margin-bottom: 8px; /* Add spacing between list items */
 }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap; /* Ensures columns wrap on smaller screens */
-  justify-content: center;
-}
-
 .column {
   margin: 0 10px;
-  flex: 1 0 auto; /* Ensures columns take equal width on smaller screens */
+  flex: 0 0 auto; /* Ensures columns shrink-to-fit on smaller screens */
   max-width: 250px; /* Adjust as needed */
 }
 
 .blue-column {
   margin: 0 10px;
-  flex: 1 0 auto; /* Same as above */
+  flex: 0 0 auto; /* Same as above */
   max-width: 150px; /* Adjust as needed */
 }
 
