@@ -1,4 +1,6 @@
-import { Session } from '@/app/supabase-server';
+'use client';
+
+import { getSession } from '@/app/supabase-server';
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
 import React, { useState } from 'react';
@@ -19,7 +21,7 @@ interface Props {
 const Event: React.FC = () => {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  const supabase = createClient(supabaseUrl, supabaseKey);
+  const supabase = createClient(supabaseUrl || '', supabaseKey || '');
   const [formData, setFormData] = useState<EventFormData>({
     title: '',
     description: '',
@@ -33,7 +35,7 @@ const Event: React.FC = () => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  const createCalendarEvent = async () => {
+  const createCalendarEvent = async (session: Session | undefined) => {
     console.log('Creating calendar event');
     const { title, description, startTime, endTime } = formData;
 
@@ -87,8 +89,8 @@ const Event: React.FC = () => {
     event.preventDefault();
 
     try {
-      // Call your function to create the Google Calendar event
-      await createCalendarEvent();
+      // Call your function to create the Google Calendar event and pass the session
+      await createCalendarEvent(session);
     } catch (error) {
       console.error('Error creating event:', error);
       // Handle other errors...

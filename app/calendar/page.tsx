@@ -1,6 +1,7 @@
 'use client';
 
-import Event from './Event';
+import CoffeeForm from '../sliders/CoffeeFinal';
+import MorningForm from '../sliders/MorningFinal';
 import { EventSourceInput } from '@fullcalendar/core/index.js';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin, {
@@ -21,6 +22,8 @@ interface Event {
 }
 
 export default function Home() {
+  const [morningValue, setMorningValue] = useState<number>(50);
+  const [coffeeValue, setCoffeeValue] = useState<number>(50);
   const [events, setEvents] = useState([
     { title: 'event 1', id: '1' },
     { title: 'event 2', id: '2' },
@@ -38,6 +41,14 @@ export default function Home() {
     allDay: false,
     id: 0
   });
+
+  const handleMorningChange = (value: number) => {
+    setMorningValue(value);
+  };
+
+  const handleCoffeeChange = (value: number) => {
+    setCoffeeValue(value);
+  };
 
   useEffect(() => {
     let draggableEl = document.getElementById('draggable-el');
@@ -121,10 +132,18 @@ export default function Home() {
 
   return (
     <>
-      <Event />
       <nav className="flex justify-between mb-12 border-b border-violet-100 p-4">
         <h1 className="font-bold text-2xl text-gray-700">Calendar</h1>
       </nav>
+      <div className="flex">
+        <div style={{ flex: 1, textAlign: 'right' }}>
+          <MorningForm />
+        </div>
+        <div style={{ flex: 1, textAlign: 'left' }}>
+          <CoffeeForm />
+        </div>
+      </div>
+
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="grid grid-cols-10">
           <div className="col-span-8">

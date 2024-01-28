@@ -69,6 +69,9 @@ export default async function Account() {
 
   return (
     <section className="mb-32 bg-black">
+      <nav className="flex justify-between mb-12 border-b border-violet-100 p-4">
+        <h1 className="font-bold text-2xl text-gray-700">Account</h1>
+      </nav>
       <div className="max-w-6xl px-4 py-8 mx-auto sm:px-6 sm:pt-24 lg:px-8">
         <div className="sm:align-center sm:flex sm:flex-col">
           <h1 className="text-4xl font-extrabold text-white sm:text-center sm:text-6xl">
@@ -80,39 +83,7 @@ export default async function Account() {
           </p>
         </div>
       </div>
-      <div className="p-4">
-        <Card
-          title="Schedule your tasks"
-          description="Input your tasks and a short description about each."
-          footer={
-            <div className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
-              <p>Start of your event</p>
-
-              <p>End of your event</p>
-
-              <p>Event name</p>
-
-              <p>Event description</p>
-
-              <p className="pb-4 sm:pb-0">
-                We will email you to verify the change.
-              </p>
-            </div>
-          }
-        >
-          <div className="mt-8 mb-4 text-xl font-semibold">
-            <form id="emailForm" action={updateEmail}>
-              <input
-                type="text"
-                name="email"
-                className="w-1/2 p-3 rounded-md bg-zinc-800"
-                defaultValue={user ? user.email : ''}
-                placeholder="Your email"
-                maxLength={64}
-              />
-            </form>
-          </div>
-        </Card>
+      <div className="max-w-3xl m-auto">
         <Card
           title="Your Plan"
           description={
