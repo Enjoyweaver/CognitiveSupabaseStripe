@@ -9,7 +9,7 @@ const meta = {
   description: 'Schedule your day with ease',
   cardImage: '/og.png',
   robots: 'follow, index',
-  favicon: '/favicon.ico',
+  favicon: '/logo.png', // Update this line to point to the new favicon image
   url: 'https://cognitivelabs.vercel.app',
   type: 'website'
 };
