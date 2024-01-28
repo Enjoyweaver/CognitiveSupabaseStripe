@@ -135,7 +135,7 @@ a {
 /* Responsive styling for smaller screens */
 @media (max-width: 767px) {
   .flex-columns {
-    max-width: 1140px; /* Ensure container doesn't overflow */
+    max-width: 767px; /* Ensure container doesn't overflow */
     margin: 0 auto; /* Center columns horizontally */
   }
 
