@@ -133,10 +133,11 @@ a {
 }
 
 /* Responsive styling for smaller screens */
-@media (max-width: 1140px) {
+@media (max-width: 747px) {
   .flex-columns {
-    max-width: 767px; /* Ensure container doesn't overflow */
+    max-width: 100%; /* Ensure container doesn't overflow */
     margin: 0 auto; /* Center columns horizontally */
+    padding: 0 20px; /* Add padding to the container for better spacing */
   }
 
   .bg-blue-500 {
