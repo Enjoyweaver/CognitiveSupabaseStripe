@@ -132,25 +132,20 @@ a {
   margin-bottom: 8px; /* Add spacing between list items */
 }
 
-.bg-blue-500 {
-  margin: 0; /* Remove margin for smaller screens */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.bg-green-500 {
-  flex: 1; /* Make middle and right columns grow to fill available space */
-  max-width: none; /* Remove max-width for smaller screens */
-  margin: 0 20px; /* Add spacing between the columns on mobile */
+.column {
+  margin: 0 10px;
+  width: 100%;
+  max-width: 300px; /* Adjust the max-width as needed */
 }
 
-.bg-orange-500 {
-  flex: 1; /* Make middle and right columns grow to fill available space */
-  max-width: none; /* Remove max-width for smaller screens */
-  margin: 0; /* Add spacing between the columns on mobile */
-}
-
-@media (max-width: 767px) {
-  .flex-columns {
-    margin-left: 20px;
-    margin-right: 20px;
+@media (min-width: 768px) {
+  .column {
+    width: calc(33.33% - 20px); /* 3 columns with 20px spacing */
   }
 }
