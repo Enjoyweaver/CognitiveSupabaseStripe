@@ -135,19 +135,18 @@ a {
 /* Responsive styling for smaller screens */
 @media (max-width: 767px) {
   .flex-columns {
-    flex-direction: row; /* Stack columns on top of each other */
+    max-width: 1140px; /* Ensure container doesn't overflow */
   }
 
   .bg-blue-500 {
-    max-width: 150px; /* Set the maximum width for the left column */
-    margin-right: 10px; /* Add spacing between the left and middle columns */
+    max-width: 20%; /* First column adjusts based on screen size */
+    margin-right: 10px;
   }
 
   .bg-green-500,
   .bg-orange-500 {
-    flex: 1; /* Make middle and right columns grow to fill available space */
-    max-width: none; /* Remove max-width for smaller screens */
-    margin: 0 10px; /* Add spacing between the columns on mobile */
+    flex: 1; /* Middle and right columns fill remaining space */
+    margin: 0 10px; /* Adjust spacing as needed */
   }
 }
 
