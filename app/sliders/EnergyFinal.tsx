@@ -60,7 +60,7 @@ const EnergyForm: React.FC = () => {
 
   return (
     <div>
-      <h2 className="text-center">How energized are you feeling today?</h2>
+      <h2 className="text-center">How energized are you today?</h2>
       <br />
       <form>
         <EnergySlider
