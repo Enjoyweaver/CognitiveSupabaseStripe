@@ -1,5 +1,6 @@
 'use client';
 
+/// <reference types="google-apps-script" />
 import EnergyForm from '../sliders/EnergyFinal';
 import MorningForm from '../sliders/MorningFinal';
 import { EventSourceInput } from '@fullcalendar/core/index.js';
