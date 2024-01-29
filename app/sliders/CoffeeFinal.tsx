@@ -78,13 +78,13 @@ const CoffeeForm: React.FC = () => {
 
 const CoffeeSliderStyle = `
   .coffeetooltip::before {
-    color: var(--coffeeColor, hsla(24, 90%, 36%, 0.5));
+    color: white;
     content: var(--coffeeLabel, "coffee") " " counter(low) "%";
     left: 0.5rem;
   }
 
   .coffeetooltip::after {
-    color: var(--waterColor, hsla(236, 74%, 54%, 0.5));
+    color: white;
     content: var(--waterLabel, "water") " " counter(high) "%";
     right: 0.5rem;
   }

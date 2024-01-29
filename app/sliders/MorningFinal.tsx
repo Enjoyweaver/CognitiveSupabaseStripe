@@ -78,13 +78,13 @@ const MorningForm: React.FC = () => {
 
 const MorningSliderStyle = `
   .morningtooltip::before {
-    color: var(--morningColor, hsla(24, 90%, 36%, 0.5));
+    color: white;
     content: var(--morningLabel, "morning") " " counter(low) "%";
     left: 0.5rem;
   }
 
   .morningtooltip::after {
-    color: var(--eveningColor, hsla(236, 74%, 54%, 0.5));
+    color: white;
     content: var(--eveningLabel, "evening") " " counter(high) "%";
     right: 0.5rem;
   }
