@@ -123,16 +123,48 @@ export default function Home() {
     });
   };
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setAllEvents([...allEvents, newEvent]);
-    setShowModal(false);
-    setNewEvent({
-      title: '',
-      start: '',
-      allDay: false,
-      id: 0
-    });
+
+    try {
+      const calendar = google.calendar({
+        version: 'v3',
+        auth: process.env.REACT_APP_SUPABASE_AUTH_TOKEN
+      });
+
+      // Example: Creating a new event
+      const event = {
+        summary: newEvent.title,
+        description: 'Your event description',
+        start: {
+          dateTime: newEvent.start,
+          timeZone: 'Your Timezone'
+        },
+        end: {
+          dateTime: 'End Time of Event',
+          timeZone: 'Your Timezone'
+        }
+      };
+
+      // Call the Google Calendar API to insert the event
+      const calendarResponse = await calendar.events.insert({
+        calendarId: 'primary', // 'primary' represents the user's primary calendar
+        resource: event
+      });
+
+      console.log('Event created: ', calendarResponse.data);
+
+      setAllEvents([...allEvents, newEvent]);
+      setShowModal(false);
+      setNewEvent({
+        title: '',
+        start: '',
+        allDay: false,
+        id: 0
+      });
+    } catch (error) {
+      console.error('Error creating event: ', error);
+    }
   }
 
   return (
@@ -157,7 +189,7 @@ export default function Home() {
               headerToolbar={{
                 left: 'prev,next today',
                 center: 'title',
-                right: 'resourceTimelineWook, dayGridMonth,timeGridWeek'
+                right: 'dayGridMonth,timeGridWeek'
               }}
               events={allEvents as EventSourceInput}
               nowIndicator={true}
