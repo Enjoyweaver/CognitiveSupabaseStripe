@@ -29,7 +29,12 @@ export default function Home() {
     { title: 'event 2', id: '2' },
     { title: 'event 3', id: '3' },
     { title: 'event 4', id: '4' },
-    { title: 'event 5', id: '5' }
+    { title: 'event 5', id: '5' },
+    { title: 'event 6', id: '6' },
+    { title: 'event 7', id: '7' },
+    { title: 'event 8', id: '8' },
+    { title: 'event 9', id: '9' },
+    { title: 'add event', id: '10' }
   ]);
   const [allEvents, setAllEvents] = useState<Event[]>([]);
   const [showModal, setShowModal] = useState(false);
@@ -144,7 +149,7 @@ export default function Home() {
         </div>
       </div>
 
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <main className="flex min-h-screen flex-col items-center justify-between pl-24">
         <div className="grid grid-cols-10">
           <div className="col-span-8">
             <FullCalendar
@@ -167,18 +172,20 @@ export default function Home() {
           </div>
           <div
             id="draggable-el"
-            className="ml-8 w-full border-2 p-2 rounded-md mt-16 lg:h-1/2 bg-violet-50"
+            className="ml-8 w-full border-2 p-2 rounded-md mt-16  draggable"
           >
             <h1 className="font-bold text-lg text-center">Drag Event</h1>
-            {events.map((event) => (
-              <div
-                className="fc-event border-2 p-1 m-2 w-full rounded-md ml-auto text-center bg-white"
-                title={event.title}
-                key={event.id}
-              >
-                {event.title}
-              </div>
-            ))}
+            <div className="event-container">
+              {events.map((event) => (
+                <div
+                  className="fc-event border-2 p-1 m-2 w-full rounded-md ml-auto text-center bg-white draggabletext"
+                  title={event.title}
+                  key={event.id}
+                >
+                  {event.title}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

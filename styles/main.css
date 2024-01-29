@@ -138,3 +138,40 @@ a {
     font-size: 0.7rem;
   }
 }
+
+.draggable {
+  background-color: #38b6ff;
+  cursor: grab;
+}
+
+.draggabletext {
+  color: #38b6ff;
+}
+
+.event-container {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.event-container > div {
+  flex: 1 1 0;
+  margin: 1 0px;
+}
+
+input {
+  @apply px-2;
+}
+.fc-header-toolbar {
+  display: inline-block;
+  padding: 4px 4px;
+
+  @apply space-x-8;
+}
+
+.fc-day {
+  @apply m-8;
+}
+
+.fc-scrollgrid-sync-table {
+  @apply w-full;
+}
