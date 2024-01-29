@@ -2,71 +2,69 @@
 
 import React, { useState, ChangeEvent, useEffect } from 'react';
 
-interface CoffeeSliderProps {
-  coffeevalue: number;
+interface EnergySliderProps {
+  energyvalue: number;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const CoffeeSlider: React.FC<CoffeeSliderProps> = ({
-  coffeevalue,
+const EnergySlider: React.FC<EnergySliderProps> = ({
+  energyvalue,
   onChange
 }) => {
-  const shouldShift = coffeevalue > -1 && coffeevalue < 101;
+  const shouldShift = energyvalue > -1 && energyvalue < 101;
 
   useEffect(() => {
     document.documentElement.style.setProperty(
-      '--coffee-value',
-      coffeevalue.toString()
+      '--energy-value',
+      energyvalue.toString()
     );
-  }, [coffeevalue]);
+  }, [energyvalue]);
 
   return (
-    <div className="coffee-slider-container">
-      <div className="coffeecontrol">
+    <div className="energy-slider-container">
+      <div className="energycontrol">
         <input
           id="track"
           type="range"
           min="0"
           max="100"
-          value={coffeevalue}
+          value={energyvalue}
           onChange={onChange}
-          className="coffeeslider-input"
+          className="energyslider-input"
         />
         <div
-          className="coffeetooltip"
+          className="energytooltip"
           style={{ '--shift': shouldShift ? 1 : 0 } as React.CSSProperties}
         ></div>
         <div
-          className="coffeecontrol__track"
+          className="energycontrol__track"
           style={{ '--shift': shouldShift ? 1 : 0 } as React.CSSProperties}
         ></div>
       </div>
-      <style>{CoffeeSliderStyle}</style>
+      <style>{EnergySliderStyle}</style>
     </div>
   );
 };
 
-const CoffeeForm: React.FC = () => {
-  const [coffeeslidervalue, setCoffeeslidervalue] = useState<number>(50);
+const EnergyForm: React.FC = () => {
+  const [energyslidervalue, setEnergyslidervalue] = useState<number>(50);
 
   const handleSliderChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const coffeevalue = parseInt(event.target.value, 10);
-    setCoffeeslidervalue(coffeevalue);
+    const energyvalue = parseInt(event.target.value, 10);
+    setEnergyslidervalue(energyvalue);
     document.documentElement.style.setProperty(
-      '--coffee-value',
-      coffeevalue.toString()
+      '--energy-value',
+      energyvalue.toString()
     );
   };
 
   return (
     <div>
-      <h2 className="text-center">
-        Are you more of a coffee person or a water person?
-      </h2>
+      <h2 className="text-center">How energized are you feeling today?</h2>
       <br />
       <form>
-        <CoffeeSlider
-          coffeevalue={coffeeslidervalue}
+        <EnergySlider
+          energyvalue={energyslidervalue}
           onChange={handleSliderChange}
         />
         <br />
@@ -76,25 +74,25 @@ const CoffeeForm: React.FC = () => {
   );
 };
 
-const CoffeeSliderStyle = `
-  .coffeetooltip::before {
+const EnergySliderStyle = `
+  .energytooltip::before {
     color: white;
-    content: var(--coffeeLabel, "coffee") " " counter(low) "%";
+    content: var(--energyLabel, "energy") " " counter(low) "%";
     left: 0.5rem;
   }
 
-  .coffeetooltip::after {
+  .energytooltip::after {
     color: white;
-    content: var(--waterLabel, "water") " " counter(high) "%";
+    content: var(--waterLabel, ) ;
     right: 0.5rem;
   }
 
-  .coffeecontrol__track::before {
-    background: var(--coffeeColor, hsla(24, 90%, 36%, 0.5));
+  .energycontrol__track::before {
+    background: green;
   }
 
-  .coffeecontrol__track::after {
-    background: var(--waterColor, hsla(236, 74%, 54%, 0.5));
+  .energycontrol__track::after {
+  
   }
 
   @font-face {
@@ -108,12 +106,12 @@ const CoffeeSliderStyle = `
   box-sizing: border-box;
 }
 
-.coffee-slider-container {
+.energy-slider-container {
   width: 300px; /* Adjust the width as needed */
   margin: 0 auto;
 }
 
-.coffeecontrol {
+.energycontrol {
   position: relative;
   display: grid;
   place-items: center;
@@ -132,8 +130,8 @@ const CoffeeSliderStyle = `
   border-width: 0;
 }
 
-.coffeecontrol:focus-within,
-.coffeecontrol:hover {
+.energycontrol:focus-within,
+.energycontrol:hover {
   --active: 1;
 }
 
@@ -173,7 +171,7 @@ const CoffeeSliderStyle = `
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 
-.coffeetooltip {
+.energytooltip {
   font-size: 1rem;
   position: absolute;
   top: 0;
@@ -184,12 +182,12 @@ const CoffeeSliderStyle = `
   transform: translateY(calc(var(--shift, 0) * 50%));
   transition: transform var(--speed) var(--timing);
   z-index: 2;
-  counter-reset: low var(--coffee-value) high calc(100 - var(--coffee-value));
+  counter-reset: low var(--energy-value) high calc(100 - var(--energy-value));
 }
 
-.coffeetooltip::before,
-.coffeetooltip::after {
-  --range: calc((50 - (var(--coffee-value) / 100 * 10)) * 1%);
+.energytooltip::before,
+.energytooltip::after {
+  --range: calc((50 - (var(--energy-value) / 100 * 10)) * 1%);
   font-variant: tabular-nums;
   position: absolute;
   top: 50%;
@@ -197,11 +195,11 @@ const CoffeeSliderStyle = `
   font-family: monospace;
 }
 
-.coffeecontrol__track {
-  --coffee: hsl(
-    24 74% calc(24% + (30% * (var(--coffee-value, 0) / 100))) / 0.4
+.energycontrol__track {
+  --energy: hsl(
+    24 74% calc(24% + (30% * (var(--energy-value, 0) / 100))) / 0.4
   );
-  --water: hsl(0 0% 100% / calc(0.1 + (0.4 * (var(--coffee-value, 0) / 100))));
+  --water: hsl(0 0% 100% / calc(0.1 + (0.4 * (var(--energy-value, 0) / 100))));
   height: calc(50% + (var(--shift) * 50%));
   width: 100%;
   position: absolute;
@@ -210,40 +208,40 @@ const CoffeeSliderStyle = `
   transition: height var(--speed) var(--timing);
 }
 
-.coffeecontrol__track::before,
-.coffeecontrol__track::after {
+.energycontrol__track::before,
+.energycontrol__track::after {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   border-radius: 4px;
-  transition: width var(--coffee--update);
+  transition: width var(--energy--update);
 }
 
-.coffeecontrol__track::before {
+.energycontrol__track::before {
   left: 0;
-  width: calc(var(--coffee-value, 0) * 1% - 0.5rem);
+  width: calc(var(--energy-value, 0) * 1% - 0.5rem);
 }
 
-.coffeecontrol__track::after {
+.energycontrol__track::after {
   right: 0;
-  width: calc((100 - var(--coffee-value, 0)) * 1% - 0.5rem);
+  width: calc((100 - var(--energy-value, 0)) * 1% - 0.5rem);
 }
 
-.coffeecontrol__indicator {
+.energycontrol__indicator {
   height: 5%;
   border-radius: 4px;
   width: 4px;
   position: absolute;
   top: 50%;
   background: hsl(0 0% 100% / calc((var(--active, 0) * 0.5) + 0.5));
-  left: calc(var(--coffee-value, 0) * 1%);
+  left: calc(var(--energy-value, 0) * 1%);
   z-index: 2;
   translate: -50% -50%;
-  transition: left var(--coffee--update), background var(--coffee--update);
+  transition: left var(--energy--update), background var(--energy--update);
 }
 
-.coffeeslider-input {
+.energyslider-input {
   position: relative;
   width: 100%;
   opacity: 0;
@@ -253,6 +251,6 @@ const CoffeeSliderStyle = `
 
 `;
 
-export { CoffeeSlider, CoffeeSliderStyle };
+export { EnergySlider, EnergySliderStyle };
 
-export default CoffeeForm;
+export default EnergyForm;

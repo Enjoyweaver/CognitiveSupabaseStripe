@@ -74,28 +74,6 @@ a {
   height: 66.67%; /* Apply height for extra-large screens */
 }
 
-.fc-h-event {
-  border: 1px solid #8b5cf6; /* Apply border */
-  background-color: #9333ea; /* Apply background color */
-}
-
-.fc .fc-daygrid-day.fc-day-today {
-  background-color: #dbc4f5; /* Apply background color */
-}
-
-.fc .fc-button {
-  background-color: #6d28d9; /* Apply background color */
-  hover: #7c3aed; /* Apply hover background color */
-}
-
-.fc .fc-button-primary:not(:disabled).fc-button-active {
-  background-color: #8b5cf6; /* Apply background color */
-}
-
-.fc .fc-button-primary:disabled {
-  background-color: #8b5cf6; /* Apply background color */
-}
-
 .list-item {
   height: 120px; /* Default height for desktop */
 }
@@ -125,7 +103,7 @@ a {
 
 .signika-title {
   font-family: 'Signika', sans-serif;
-  color: #38b6ff;
+  color: #e9f57a;
 }
 
 .list-item {

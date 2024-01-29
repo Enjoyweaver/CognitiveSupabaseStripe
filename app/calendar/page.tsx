@@ -1,6 +1,6 @@
 'use client';
 
-import CoffeeForm from '../sliders/CoffeeFinal';
+import EnergyForm from '../sliders/EnergyFinal';
 import MorningForm from '../sliders/MorningFinal';
 import { EventSourceInput } from '@fullcalendar/core/index.js';
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -140,7 +140,7 @@ export default function Home() {
           <MorningForm />
         </div>
         <div style={{ flex: 1, textAlign: 'left' }}>
-          <CoffeeForm />
+          <EnergyForm />
         </div>
       </div>
 

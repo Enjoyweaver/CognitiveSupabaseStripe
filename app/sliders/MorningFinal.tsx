@@ -61,7 +61,7 @@ const MorningForm: React.FC = () => {
   return (
     <div>
       <h2 className="text-center">
-        Are you more of a morning or evening person?
+        Are you more of a morning or an evening person?
       </h2>
       <br />
       <form>
@@ -90,7 +90,7 @@ const MorningSliderStyle = `
   }
 
   .morningcontrol__track::before {
-    background: var(--morningColor, hsla(24, 90%, 36%, 0.5));
+    background: orange;
   }
 
   .morningcontrol__track::after {
