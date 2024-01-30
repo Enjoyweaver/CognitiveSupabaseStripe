@@ -142,42 +142,6 @@ export default function Home() {
     });
   }
 
-  async function submitToGoogleCalendar(event: Event) {
-    try {
-      // Use the user's access token obtained during authentication
-      const userAccessToken = 'USER_ACCESS_TOKEN'; // Replace with the actual user's access token
-
-      const calendar = google.calendar({
-        version: 'v3',
-        auth: userAccessToken
-      });
-
-      // Create the event object
-      const googleEvent = {
-        summary: event.title,
-        description: 'Event Description',
-        start: {
-          dateTime: new Date(event.start).toISOString(),
-          timeZone: 'Your Timezone'
-        },
-        end: {
-          dateTime: 'End Time of Event',
-          timeZone: 'Your Timezone'
-        }
-      };
-
-      // Call the Google Calendar API to insert the event
-      const calendarResponse = await calendar.events.insert({
-        calendarId: 'primary', // 'primary' represents the user's primary calendar
-        resource: googleEvent
-      });
-
-      console.log('Event created on Google Calendar: ', calendarResponse.data);
-    } catch (error) {
-      console.error('Error creating event on Google Calendar: ', error);
-    }
-  }
-
   return (
     <>
       <nav className="flex justify-between mb-12 border-b border-violet-100 p-4">
