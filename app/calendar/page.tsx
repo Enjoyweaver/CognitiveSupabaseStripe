@@ -125,14 +125,8 @@ export default function Home() {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-
-    // Add the new event to the local state
     setAllEvents([...allEvents, newEvent]);
-
-    // Close the modal
     setShowModal(false);
-
-    // Reset the newEvent state
     setNewEvent({
       title: '',
       start: '',
@@ -163,7 +157,7 @@ export default function Home() {
               headerToolbar={{
                 left: 'prev,next today',
                 center: 'title',
-                right: 'dayGridMonth,timeGridWeek'
+                right: 'resourceTimelineWook, dayGridMonth,timeGridWeek'
               }}
               events={allEvents as EventSourceInput}
               nowIndicator={true}
