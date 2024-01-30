@@ -1,4 +1,4 @@
-'ue client';
+/*
 
 import {
   useSession,
@@ -111,3 +111,4 @@ function App() {
 }
 
 export default App;
+*/
