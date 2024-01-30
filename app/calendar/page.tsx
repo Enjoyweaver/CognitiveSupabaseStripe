@@ -157,7 +157,7 @@ export default function Home() {
               headerToolbar={{
                 left: 'prev,next today',
                 center: 'title',
-                right: 'resourceTimelineWook, dayGridMonth,timeGridWeek'
+                right: 'dayGridMonth,timeGridWeek'
               }}
               events={allEvents as EventSourceInput}
               nowIndicator={true}

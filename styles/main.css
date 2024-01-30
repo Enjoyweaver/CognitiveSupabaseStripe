@@ -150,7 +150,7 @@ a {
 
 .event-container {
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: wrap;s
 }
 
 .event-container > div {
@@ -158,20 +158,3 @@ a {
   margin: 1 0px;
 }
 
-input {
-  @apply px-2;
-}
-.fc-header-toolbar {
-  display: inline-block;
-  padding: 4px 4px;
-
-  @apply space-x-8;
-}
-
-.fc-day {
-  @apply m-8;
-}
-
-.fc-scrollgrid-sync-table {
-  @apply w-full;
-}
